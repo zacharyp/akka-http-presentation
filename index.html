@@ -1,0 +1,120 @@
+<html>
+<head>
+
+    <title>Akka HTTP and Back Pressure</title>
+
+    <link rel="stylesheet" href="css/reveal.css">
+    <link rel="stylesheet" href="css/theme/moon.css">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
+
+     <!--Theme used for syntax highlighting of code-->
+    <link rel="stylesheet" href="lib/css/darkula.css">
+
+    <style>
+    .reveal pre code {
+        padding: 5px;
+        overflow: auto;
+        max-height: 800px;
+        word-wrap: normal;
+    }
+</style>
+</head>
+<body>
+    <div class="reveal">
+        <div class="slides">
+            <section style="height: 100%; width: 100%">
+                <h1>Akka HTTP and Back Pressure</h1>
+
+                <h2>Zachary Pitts</h2>
+
+                <p>October 12, 2016</p>
+
+                <p style="position: center;">
+                </p>
+
+                <div style="text-align: left; position: absolute; bottom: 100px; left: 0px;">
+                    <i class="fa fa-github"></i> @zacharyp<br>
+                    <i class="fa fa-twitter"></i> @zacharypitts<br>
+                    <i class="fa fa-envelope"></i> zacharyp@gmail.com<br>
+                    <i class="fa fa-linkedin-square"></i></i> https://www.linkedin.com/in/zachary-pitts-874b61b
+                    <br>
+                    <a href="https://github.com/easel/akka-streams-intro">https://github.com/zacharyp/akka-http-presentation</a><br>
+                </div>
+            </section>
+
+            <section data-markdown="slides/01-intro.md"
+                     data-separator="^\n\n\n"
+                     data-separator-vertical="^\n\n"
+                     data-separator-notes="^Note:"
+                     data-charset="iso-8859-15">
+            </section>
+
+            <section data-markdown="slides/02-akka-streams.md"
+                     data-separator="^\n\n\n"
+                     data-separator-vertical="^\n\n"
+                     data-separator-notes="^Note:"
+                     data-charset="iso-8859-15">
+            </section>
+
+            <section data-markdown="slides/03-spray-io.md"
+                     data-separator="^\n\n\n"
+                     data-separator-vertical="^\n\n"
+                     data-separator-notes="^Note:"
+                     data-charset="iso-8859-15">
+            </section>
+
+            <section data-markdown="slides/04-akka-http.md"
+                     data-separator="^\n\n\n"
+                     data-separator-vertical="^\n\n"
+                     data-separator-notes="^Note:"
+                     data-charset="iso-8859-15">
+            </section>
+
+            <section style="height: 100%; width: 100%">
+                <h1>Akka HTTP and Back Pressure Demo</h1>
+            </section>
+
+            <section data-markdown="slides/05-final.md"
+                     data-separator="^\n\n\n"
+                     data-separator-vertical="^\n\n"
+                     data-separator-notes="^Note:"
+                     data-charset="iso-8859-15">
+            </section>
+        </div>
+    </div>
+    <script src="lib/js/head.min.js"></script>
+    <script src="js/reveal.js"></script>
+    <script>
+        Reveal.initialize({
+            history: true,
+
+            // The "normal" size of the presentation, aspect ratio will be preserved
+            // when the presentation is scaled to fit different resolutions. Can be
+            // specified using percentage units.
+            width: "1280",
+            height: "1024",
+
+            // Factor of the display size that should remain empty around the content
+            margin: 0.02,
+
+            // Bounds for smallest/largest possible scale to apply to content
+            minScale: 0.2,
+            maxScale: 3,
+
+            dependencies: [
+                {src: 'plugin/markdown/marked.js'},
+                {src: 'plugin/markdown/markdown.js'},
+                {src: 'plugin/notes/notes.js', async: true},
+                {
+                    src: 'plugin/highlight/highlight.js', async: true, callback: function () {
+                    hljs.initHighlightingOnLoad();
+                }
+                }
+            ]
+        });
+        Reveal.configure({slideNumber: 'c/t'});
+    </script>
+</body>
+</html>
